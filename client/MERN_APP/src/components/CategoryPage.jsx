@@ -6,7 +6,6 @@ import { NavLink } from "react-router-dom";
 export default function CategoryPage() {
   const { categoryId } = useParams();
   const [products, setProducts] = useState([]);
-  const [cat, setCat] = useState([])
   const fetchCategoryProducts = async () => {
       try {
         const result = await axios.get(`https://api.escuelajs.co/api/v1/categories/${categoryId}/products`);
@@ -26,7 +25,7 @@ export default function CategoryPage() {
 
   return (
     <div className="container mt-5">
-      <h2 className="text-center mb-4">{cat.name} </h2>
+      <h2 className="text-center mb-4"> Product </h2>
       <div className="row">
         {products.map((val, index) => (
           <div key={val.id} className="col-sm-6 col-md-4 col-lg-3 mb-4">
