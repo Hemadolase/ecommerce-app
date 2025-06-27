@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { NavLink, useNavigate } from "react-router-dom";
-// axios.defaults.withCredentials = true;
 
 export default function Cart() {
   const [cartItems, setCartItems] = useState([]);
