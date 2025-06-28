@@ -15,7 +15,6 @@ app.use(session({
 require('dotenv').config()
 
 const PORT = process.env.PORT ||  3000;
-const HOST = '127.0.0.1'
 
 const cors = require("cors");
 
@@ -35,6 +34,6 @@ app.get("/",(req, res)=>{
 
 
 
-app.listen(PORT,HOST,()=>{
+app.listen(PORT, ()=>{
     console.log("Server is runing")
 })
